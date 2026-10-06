@@ -5,6 +5,7 @@ import BrandSlider, {
   BrandList,
 } from "@/components/ui/hero-01-utils/brand-slider";
 import type { AvatarList } from "@/components/ui/hero-01-utils/hero";
+import ScrollRevealSection from "@/components/ui/scroll-reveal-section";
 
 export default function AgencyHeroSection() {
   const avatarList: AvatarList[] = [
@@ -98,6 +99,7 @@ export default function AgencyHeroSection() {
       <main>
         <HeroSection avatarList={avatarList} />
         <BrandSlider brandList={brandList} />
+        <ScrollRevealSection />
       </main>
     </div>
   );
