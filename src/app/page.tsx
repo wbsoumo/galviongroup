@@ -57,16 +57,14 @@ export default function AgencyHeroSection() {
   ];
 
   const brandList: BrandList[] = [
-    { name: "Scrub Daddy", country: "US" },
-    { name: "Skippi Ice Pops", country: "IN" },
-    { name: "Ring", country: "US" },
-    { name: "Get-A-Way Ice Cream", country: "IN" },
-    { name: "Bombas", country: "US" },
-    { name: "Beyond Snack", country: "IN" },
-    { name: "Squatty Potty", country: "US" },
-    { name: "TagZ Foods", country: "IN" },
-    { name: "Simply Fit Board", country: "US" },
-    { name: "Hammered", country: "IN" },
+    { name: "Scrub Daddy", country: "US", logoUrl: "https://cdn.21st.dev/assets/localized/59a2b5a0dfc1531e2d1ea42d71ae8615f37582e1f8a17e4a1b1aff9afc7ef878.jpg" },
+    { name: "Skippi Ice Pops", country: "IN", logoUrl: "https://cdn.21st.dev/assets/localized/c7097eeb66ad097b6e5f9dbb95ae857cd6b55c0ad398c1ea84f3ab90a02c631e.jpg" },
+    { name: "Ring", country: "US", logoUrl: "https://cdn.21st.dev/assets/localized/c70d48e47d3a2d79ad07d16bff3aa3cff686580be031b6102cad73a15b47d8fd.jpg" },
+    { name: "Get-A-Way", country: "IN", logoUrl: "https://cdn.21st.dev/assets/localized/51c9ed392f6e7fce7fd85a78648e3e06bfdcd91999ab5fa48485888231589abf.jpg" },
+    { name: "Bombas", country: "US", logoUrl: "https://cdn.21st.dev/assets/localized/59a2b5a0dfc1531e2d1ea42d71ae8615f37582e1f8a17e4a1b1aff9afc7ef878.jpg" },
+    { name: "Beyond Snack", country: "IN", logoUrl: "https://cdn.21st.dev/assets/localized/c7097eeb66ad097b6e5f9dbb95ae857cd6b55c0ad398c1ea84f3ab90a02c631e.jpg" },
+    { name: "Squatty Potty", country: "US", logoUrl: "https://cdn.21st.dev/assets/localized/c70d48e47d3a2d79ad07d16bff3aa3cff686580be031b6102cad73a15b47d8fd.jpg" },
+    { name: "TagZ Foods", country: "IN", logoUrl: "https://cdn.21st.dev/assets/localized/51c9ed392f6e7fce7fd85a78648e3e06bfdcd91999ab5fa48485888231589abf.jpg" },
   ];
 
   return (
