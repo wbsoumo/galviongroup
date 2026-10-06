@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { Sparkles, Zap, ShieldCheck, Rocket, Layers, Code } from "lucide-react";
+import { Code2, Megaphone, Radio, TrendingUp, RefreshCw } from "lucide-react";
 
 export interface ScrollFeature {
   title: string;
@@ -31,40 +31,34 @@ export default function ScrollRevealSection() {
 
   const features: ScrollFeature[] = [
     {
-      title: "Ultra Responsive",
-      description: "Designed to look stunning on every device screens, from mobile displays to ultra-wide desktop monitors.",
-      icon: <Zap className="w-6 h-6 text-indigo-400" />,
-      tag: "Performance",
+      title: "Software Solutions",
+      description: "Custom enterprise software development, web applications, and scalable digital infrastructure engineered for performance.",
+      icon: <Code2 className="w-6 h-6 text-indigo-400" />,
+      tag: "Technology",
     },
     {
-      title: "Modern Architecture",
-      description: "Built with Next.js 16, React 19, and Tailwind CSS for lightning-fast render speeds.",
-      icon: <Code className="w-6 h-6 text-purple-400" />,
-      tag: "Tech Stack",
+      title: "Ad Agency",
+      description: "Data-driven creative campaigns, brand strategy, digital marketing, and multi-channel advertising to drive engagement.",
+      icon: <Megaphone className="w-6 h-6 text-pink-400" />,
+      tag: "Marketing",
     },
     {
-      title: "Seamless Motion",
-      description: "Fluid Framer Motion animations that react naturally as you scroll down the page.",
-      icon: <Sparkles className="w-6 h-6 text-pink-400" />,
-      tag: "Interactivity",
+      title: "Telecom Communication",
+      description: "Robust communication networks, connectivity infrastructure, and next-gen telecom solutions for global connectivity.",
+      icon: <Radio className="w-6 h-6 text-purple-400" />,
+      tag: "Telecom",
     },
     {
-      title: "Enterprise Grade",
-      description: "Rigorous standards for security, accessibility, and high performance at scale.",
-      icon: <ShieldCheck className="w-6 h-6 text-emerald-400" />,
-      tag: "Security",
+      title: "Stock / Finance",
+      description: "In-depth market research, quantitative strategy, capital growth management, and financial advisory services.",
+      icon: <TrendingUp className="w-6 h-6 text-emerald-400" />,
+      tag: "Research & Growth",
     },
     {
-      title: "Rapid Deployment",
-      description: "Integrated out of the box with Vercel for zero-downtime continuous deployments.",
-      icon: <Rocket className="w-6 h-6 text-amber-400" />,
-      tag: "DevOps",
-    },
-    {
-      title: "Modular Design",
-      description: "Easily customisable layout components designed using shadcn UI standards.",
-      icon: <Layers className="w-6 h-6 text-cyan-400" />,
-      tag: "Components",
+      title: "Money Exchange",
+      description: "Secure currency exchange, cross-border remittance, and real-time foreign exchange solutions with transparent rates.",
+      icon: <RefreshCw className="w-6 h-6 text-amber-400" />,
+      tag: "Fintech",
     },
   ];
 
@@ -78,19 +72,19 @@ export default function ScrollRevealSection() {
           <div className="inline-flex items-center space-x-2 bg-neutral-900/90 border border-neutral-800 px-4 py-1.5 rounded-full mb-6">
             <span className="flex h-2 w-2 rounded-full bg-indigo-500 animate-pulse" />
             <span className="text-xs font-semibold text-neutral-300 uppercase tracking-widest">
-              You Can Scroll
+              Our Core Services
             </span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6">
-            Interactive Experiences{" "}
+            Diverse Capabilities{" "}
             <span className="bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
-              That Flow With You
+              Empowering Growth
             </span>
           </h2>
 
           <p className="text-lg text-neutral-400 leading-relaxed">
-            Scroll down to explore how our interactive components scale dynamically, building engagement every step of the way.
+            Discover our comprehensive suite of solutions built to accelerate businesses across technology, finance, marketing, and communications.
           </p>
         </motion.div>
 
