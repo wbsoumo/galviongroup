@@ -22,7 +22,7 @@ export default function BrandSlider({ brandList }: BrandSliderProps) {
     <div className="py-12 bg-neutral-950 border-t border-b border-neutral-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
         <p className="text-xs uppercase tracking-widest font-semibold text-neutral-400">
-          Trusted by Top US & Indian Tech Startups
+          Trusted by Shark Tank US & Shark Tank India Featured Startups
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function BrandSlider({ brandList }: BrandSliderProps) {
                   className="h-6 w-auto object-contain filter invert brightness-200"
                 />
               ) : (
-                <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 group-hover:scale-125 transition-transform" />
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 group-hover:scale-125 transition-transform" />
               )}
               <span className="text-sm font-bold tracking-tight text-neutral-200 group-hover:text-white transition-colors">
                 {brand.name}

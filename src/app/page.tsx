@@ -57,16 +57,16 @@ export default function AgencyHeroSection() {
   ];
 
   const brandList: BrandList[] = [
-    { name: "Stripe", country: "US" },
-    { name: "Zerodha", country: "IN" },
-    { name: "Plaid", country: "US" },
-    { name: "Razorpay", country: "IN" },
-    { name: "Ramp", country: "US" },
-    { name: "CRED", country: "IN" },
-    { name: "Brex", country: "US" },
-    { name: "Groww", country: "IN" },
-    { name: "Substack", country: "US" },
-    { name: "Postman", country: "IN" },
+    { name: "Scrub Daddy", country: "US" },
+    { name: "Skippi Ice Pops", country: "IN" },
+    { name: "Ring", country: "US" },
+    { name: "Get-A-Way Ice Cream", country: "IN" },
+    { name: "Bombas", country: "US" },
+    { name: "Beyond Snack", country: "IN" },
+    { name: "Squatty Potty", country: "US" },
+    { name: "TagZ Foods", country: "IN" },
+    { name: "Simply Fit Board", country: "US" },
+    { name: "Hammered", country: "IN" },
   ];
 
   return (
