@@ -55,13 +55,17 @@ export default function LiquidMetalHero({
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <LiquidMetal
-        {...liquidMetalPresets[2]}
-        style={{ position: "fixed", inset: 0, zIndex: -10 }}
-      />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <LiquidMetal
+          {...liquidMetalPresets[0]}
+          fit="cover"
+          className="w-full h-full object-cover"
+          style={{ width: '100vw', height: '100vh' }}
+        />
+      </div>
       
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+      <div className="container relative z-10 mx-auto px-6 lg:px-8 max-w-7xl">
         <motion.div 
           className="text-center space-y-8"
           variants={containerVariants}
@@ -76,7 +80,7 @@ export default function LiquidMetalHero({
             >
               <Badge 
                 variant="secondary" 
-                className="bg-foreground/10 text-foreground border-foreground/20 hover:bg-foreground/20 transition-colors duration-300 backdrop-blur-sm"
+                className="bg-white/10 text-white border-white/20 hover:bg-white/20 transition-colors duration-300 backdrop-blur-md px-4 py-1.5 text-sm"
               >
                 {badge}
               </Badge>
@@ -90,14 +94,14 @@ export default function LiquidMetalHero({
             <motion.h1 
               role="heading" 
               aria-level={1}
-              className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-tight tracking-tight"
+              className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-tight tracking-tight drop-shadow-lg"
               variants={itemVariants}
             >
               {title}
             </motion.h1>
             
             <motion.p 
-              className="max-w-3xl mx-auto text-xl sm:text-2xl text-foreground/90 leading-relaxed"
+              className="max-w-3xl mx-auto text-xl sm:text-2xl text-gray-200 leading-relaxed drop-shadow-md"
               variants={itemVariants}
             >
               {subtitle}
@@ -115,7 +119,7 @@ export default function LiquidMetalHero({
               <Button 
                 onClick={onPrimaryCtaClick}
                 size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 shadow-2xl text-lg px-8 py-6 font-semibold"
+                className="bg-white text-black hover:bg-white/90 transition-all duration-300 shadow-2xl text-lg px-8 py-6 font-semibold rounded-full"
               >
                 {primaryCtaLabel}
               </Button>
@@ -130,7 +134,7 @@ export default function LiquidMetalHero({
                   onClick={onSecondaryCtaClick}
                   variant="outline"
                   size="lg"
-                  className="border-foreground/30 text-foreground hover:bg-foreground/10 hover:border-foreground/50 transition-all duration-300 backdrop-blur-sm text-lg px-8 py-6 font-semibold"
+                  className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-md text-lg px-8 py-6 font-semibold rounded-full"
                 >
                   {secondaryCtaLabel}
                 </Button>
@@ -147,7 +151,7 @@ export default function LiquidMetalHero({
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="bg-foreground/10 border-foreground/20 backdrop-blur-md shadow-2xl">
+                <Card className="bg-white/10 border-white/20 backdrop-blur-lg shadow-2xl rounded-2xl">
                   <div className="p-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {features.map((feature, index) => (
@@ -161,7 +165,7 @@ export default function LiquidMetalHero({
                             delay: 0.8 + (index * 0.1)
                           }}
                         >
-                          <p className="text-foreground/90 font-medium text-lg">
+                          <p className="text-white font-semibold text-lg">
                             {feature}
                           </p>
                         </motion.div>
