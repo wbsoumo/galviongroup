@@ -15,7 +15,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ avatarList }: HeroSectionProps) {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-neutral-950 text-white">
+    <section className="relative pt-32 pb-8 md:pt-36 md:pb-12 overflow-hidden bg-neutral-950 text-white">
       {/* Background Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-600/20 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[120px] pointer-events-none" />
@@ -54,12 +54,12 @@ export default function HeroSection({ avatarList }: HeroSectionProps) {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+        <p className="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
           We design and build award-winning digital experiences, scalable products, and cutting-edge web applications for forward-thinking companies worldwide.
         </p>
 
         {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
           <Link
             href="#contact"
             className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-neutral-200 text-neutral-950 px-8 py-4 rounded-full font-semibold text-base transition-all duration-200 shadow-xl group"
