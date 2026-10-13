@@ -3,37 +3,151 @@
 @tailwind utilities;
 
 :root {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --card: rgba(255, 255, 255, 0.08);
-  --card-foreground: #fafafa;
-  --border: rgba(255, 255, 255, 0.15);
+  --color-primary: #937AFF;
+  --color-primary-light: #4D36D0;
+  --color-secondary: #FF5353;
+  --color-body: #03010E;
+  --color-border: #202128;
+  --color-light: #0B0C17;
+  --color-dark: #040404;
+  --color-text: #DAD4DE;
+  --color-text-dark: #817E84;
+  --color-text-light: #FFFFFF;
+
+  --background: #03010E;
+  --foreground: #DAD4DE;
 }
 
-html, body {
-  background-color: #09090b;
-  color: #fafafa;
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #03010E;
+  color: #DAD4DE;
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
+/* Automark Highlight Headline Styling */
+.hasHighlight strong {
+  color: var(--color-primary);
+  font-weight: 800;
+  background: linear-gradient(135deg, #937AFF 0%, #D8CEFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Automark Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(180deg, #937AFF 0%, #4D36D0 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.875rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 25px rgba(147, 122, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(147, 122, 255, 0.6);
+  background: linear-gradient(180deg, #A48EFF 0%, #5942DF 100%);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Automark Card Glass Styling */
+.automark-card {
+  background-color: #0B0C17;
+  border: 1px solid #202128;
+  border-radius: 1.25rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.automark-card:hover {
+  border-color: rgba(147, 122, 255, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(147, 122, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Radial Glows */
+.radial-glow-primary {
+  background: radial-gradient(circle, var(--color-primary) 0%, color-mix(in srgb, var(--color-primary) 70%, transparent) 25%, transparent 70%);
+}
+
+.radial-glow-secondary {
+  background: radial-gradient(circle, var(--color-secondary) 0%, color-mix(in srgb, var(--color-secondary) 60%, transparent) 25%, transparent 70%);
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #03010E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #202128;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #937AFF;
+}
+
+::selection {
+  background-color: #937AFF;
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid #937AFF;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 14s linear infinite;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
 }
