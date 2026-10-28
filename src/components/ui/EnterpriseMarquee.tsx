@@ -412,32 +412,22 @@ export default function EnterpriseMarquee() {
   const marqueeItems = [...ENTERPRISE_PARTNERS, ...ENTERPRISE_PARTNERS];
 
   return (
-    <div className="w-full pt-8 pb-3 space-y-4">
-      {/* Subtitle Header */}
-      <div className="flex items-center justify-center gap-2 text-[11px] font-mono uppercase tracking-widest text-[#817E84] text-center px-4">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#937AFF] animate-ping" />
-        <span>Enterprise Ecosystem &amp; Regional Networks</span>
-        <span className="hidden sm:inline text-[#202128]">|</span>
-        <span className="hidden sm:inline text-[#937AFF]/90 font-semibold">
-          India • Vietnam • Thailand • Dubai • Qatar
-        </span>
-      </div>
-
+    <div className="w-full pt-4 pb-2">
       {/* Marquee Ticker Track with Soft Radial Fading Masks */}
-      <div className="relative w-full overflow-hidden py-1">
+      <div className="relative w-full overflow-hidden py-2">
         {/* Left & Right gradient edge fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#03010E] via-[#03010E]/90 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#03010E] via-[#03010E]/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-[#03010E] via-[#03010E]/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-[#03010E] via-[#03010E]/90 to-transparent z-10 pointer-events-none" />
 
         {/* Marquee Loop */}
-        <div className="flex animate-marquee gap-3 sm:gap-4 whitespace-nowrap items-center will-change-transform">
+        <div className="flex animate-marquee gap-4 sm:gap-5 whitespace-nowrap items-center will-change-transform">
           {marqueeItems.map((partner, index) => (
             <div
               key={`${partner.name}-${index}`}
               title={`${partner.name} (${partner.country})`}
-              className="h-11 sm:h-12 px-5 sm:px-6 rounded-full bg-[#0B0C17] border border-[#202128] hover:border-[#937AFF]/60 flex items-center justify-center shrink-0 transition-all duration-300 group hover:shadow-[0_0_20px_rgba(147,122,255,0.25)] hover:bg-[#101222] hover:scale-105 cursor-pointer select-none"
+              className="h-14 sm:h-16 px-7 sm:px-8 rounded-full bg-[#0B0C17] border border-[#202128] hover:border-[#937AFF]/60 flex items-center justify-center shrink-0 transition-all duration-300 group hover:shadow-[0_0_25px_rgba(147,122,255,0.3)] hover:bg-[#101222] hover:scale-105 cursor-pointer select-none"
             >
-              <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
                 {partner.logo}
               </div>
             </div>
