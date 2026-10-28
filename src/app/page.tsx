@@ -23,6 +23,7 @@ import SoftwareArchGraphic from "@/components/visuals/SoftwareArchGraphic";
 import HeroVideoShowcase from "@/components/ui/HeroVideoShowcase";
 import HeroAnimatedText from "@/components/ui/HeroAnimatedText";
 import HeroSporeCanvas from "@/components/ui/HeroSporeCanvas";
+import EnterpriseMarquee from "@/components/ui/EnterpriseMarquee";
 
 export default function HomePage() {
   return (
@@ -109,6 +110,9 @@ export default function HomePage() {
               </span>
             </div>
           </div>
+
+          {/* Regional Enterprise Ecosystem Marquee: India, Vietnam, Thailand, Dubai, Qatar */}
+          <EnterpriseMarquee />
 
           {/* Automark 3D Perspective Revealing Video Showcase Card */}
           <div className="pt-4">
